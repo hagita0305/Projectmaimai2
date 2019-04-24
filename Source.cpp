@@ -7,31 +7,37 @@
 @param name シーン名*/
 
 Scene::~Scene() {
+	std::cout << "Scene コンストラクタ：" << name << "\n";
 }
 
 /*デストラクタ*/
 Scene::~Scene() {
 	Finalize();
+	std::cout << "Scene デストラクタ：" << name << "\n";
 }
 
 /*シーンを活動状態にする*/
 void Scene::Play() {
 	isActive = true;
+	std::cout << "Scene Play：" << name << "\n";
 }
 
 /*シーンを停止状態にする*/
 void Scene::Stop(){
 	isActive = false;
+	std::cout << "Scene Stop：" << name << "\n";
 }
 
 /*シーンを表示する*/
 void Scene::Show() {
 	isVisible = true;
+	std::cout << "Scene Show：" << name << "\n";
 }
 
 /*シーンを非表示にする*/
 void Scene::Hide() {
 	isVisible = false;
+	std::cout << "Scene Hide：" << name << "\n";
 }
 
 /*シーン名を取得する*/
